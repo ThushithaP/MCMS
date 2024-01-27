@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1315.0" stylesheets="@../../CSS/layout.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finance.mcms.Controller.MainController">
+   <top>
+      <HBox prefHeight="42.0" prefWidth="1315.0" style="-fx-background-color: #41c7cc;" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="35.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <HBox.margin>
+               <Insets left="5.0" top="3.0" />
+            </HBox.margin>
+            <Image url="@../../Image/logo.png" />
+         </ImageView>
+         <Label prefHeight="34.0" prefWidth="254.0" text="Micro Credit Management System" textFill="WHITE">
+            <HBox.margin>
+               <Insets left="10.0" top="2.0" />
+            </HBox.margin>
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="332.0" prefWidth="232.0" style="-fx-background-color: #86e7eb;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#dashboardBtnClick" prefHeight="26.0" prefWidth="237.0" style="-fx-background-color: #86e7eb;" styleClass="side-menu-btn" text="Dashboard" textFill="#736a7a">
+            <VBox.margin>
+               <Insets top="15.0" />
+            </VBox.margin>
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+            <padding>
+               <Insets left="50.0" />
+            </padding>
+            <graphic>
+               <FontAwesomeIconView glyphName="DASHBOARD" styleClass="side-menu-icon" />
+            </graphic>
+         </Button>
+         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#loanBtnClick" prefHeight="26.0" prefWidth="237.0" style="-fx-background-color: #86e7eb;" styleClass="side-menu-btn" text="Loan" textFill="#736a7a">
+            <VBox.margin>
+               <Insets top="15.0" />
+            </VBox.margin>
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+            <padding>
+               <Insets left="50.0" />
+            </padding>
+            <graphic>
+               <FontAwesomeIconView glyphName="MONEY" styleClass="side-menu-icon" />
+            </graphic>
+         </Button>
+         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#customerBtnClick" prefHeight="26.0" prefWidth="237.0" style="-fx-background-color: #86e7eb;" styleClass="side-menu-btn" text="Customer" textFill="#736a7a">
+            <VBox.margin>
+               <Insets top="15.0" />
+            </VBox.margin>
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+            <padding>
+               <Insets left="50.0" />
+            </padding>
+            <graphic>
+               <FontAwesomeIconView glyphName="USERS" styleClass="side-menu-icon" />
+            </graphic>
+         </Button>
+      </VBox>
+   </left>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EEF5FF;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

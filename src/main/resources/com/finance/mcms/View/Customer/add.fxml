@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addCustomerPane" prefHeight="786.0" prefWidth="1300.0" style="-fx-background-color: #EEF5FF;" stylesheets="@../../CSS/index.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finance.mcms.Controller.Customer.AddController">
+   <Pane layoutX="46.0" layoutY="1.0" prefHeight="93.0" prefWidth="1232.0" >
+      <children>
+         <Label layoutY="52.0" prefHeight="35.0" prefWidth="207.0" text="New Customer">
+            <font>
+               <Font name="Calibri Bold" size="30.0" />
+            </font>
+         </Label>
+         <Hyperlink layoutX="1011.0" layoutY="14.0" text="Dashboard /" />
+         <Hyperlink layoutX="1083.0" layoutY="14.0" onAction="#AddCancel" text="Customer /" />
+         <Hyperlink disable="true" layoutX="1147.0" layoutY="15.0" text="New Customer" />
+      </children>
+   </Pane>
+   <Pane layoutX="46.0" layoutY="114.0" prefHeight="600.0" prefWidth="1232.0">
+
+      <TextField fx:id="fullName" layoutX="159.0" layoutY="48.0" prefHeight="30.0" prefWidth="1077.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="4.0" layoutY="52.0" text="Full Name" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="4.0" layoutY="110.0" prefHeight="20.0" prefWidth="143.0" text="Name With Initials" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="initName" layoutX="159.0" layoutY="102.0" prefHeight="30.0" prefWidth="1077.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="5.0" layoutY="174.0" text="Short Name" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="shortName" layoutX="158.0" layoutY="169.0" prefHeight="30.0" prefWidth="257.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="964.0" layoutY="173.0" text="NIC" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="nic" layoutX="1041.0" layoutY="168.0" prefHeight="26.0" prefWidth="192.0" />
+      <Label layoutX="5.0" layoutY="250.0" text="Address" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="910.0" layoutY="247.0" text="Phone Number" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="phoneNumber" layoutX="1040.0" layoutY="242.0" prefHeight="26.0" prefWidth="192.0" />
+      <Button fx:id="cusAddSave" layoutX="1125.0" layoutY="535.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #447edb;" text="Save" textFill="#fffcfc">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="520.0" layoutY="172.0" text="Gender" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="517.0" layoutY="248.0" text="Mobile Number" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="mobileNumber" layoutX="635.0" layoutY="243.0" prefHeight="26.0" prefWidth="192.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextArea fx:id="address" layoutX="154.0" layoutY="245.0" prefHeight="134.0" prefWidth="264.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <ChoiceBox fx:id="gender" layoutX="635.0" layoutY="169.0" prefHeight="30.0" prefWidth="192.0" />
+      <Label layoutX="520.0" layoutY="333.0" text="Marital Status" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <ChoiceBox fx:id="maritalStatus" layoutX="635.0" layoutY="330.0" prefHeight="30.0" prefWidth="192.0" />
+      <Button fx:id="cusAddCancel" layoutX="987.0" layoutY="536.0" mnemonicParsing="false" onAction="#AddCancel" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #e84141;" text="Cancel" textFill="#fffcfc">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="909.0" layoutY="334.0" text="Date Of Birth" textFill="#595454">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="dob" layoutX="1039.0" layoutY="329.0" prefHeight="26.0" prefWidth="192.0" />
+   </Pane>
+
+</AnchorPane>

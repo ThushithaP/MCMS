@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finance.mcms.Controller.AuthController">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/logo-noback.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="293.0" layoutX="14.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/login.png" />
+               </image>
+            </ImageView>
+            </children></AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="userEmail" layoutX="75.0" layoutY="107.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #c3d5f7; -fx-border-width: 2px;" text="mcms@test.com" />
+                <PasswordField fx:id="userPassword" layoutX="75.0" layoutY="165.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #c3d5f7; -fx-border-width: 2px;" text="1234" />
+                <Label layoutX="107.0" layoutY="31.0" text="User Login" textFill="#4f3aec">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="74.0" layoutY="266.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="159.0" style="-fx-background-color: #4f3aec;" text="Login" textFill="WHITE" />
+                <Hyperlink layoutX="80.0" layoutY="340.0" text="Forget Your Password ?" />
+                <Label fx:id="loginError" layoutX="77.0" layoutY="215.0" prefHeight="18.0" prefWidth="147.0" textFill="#ec0c0c" />
+
+            </children>
+        </AnchorPane>
+    </right>
+
+</BorderPane>

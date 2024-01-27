@@ -1,0 +1,47 @@
+Hyperlink {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+}
+
+.act-bulk-tooltip{
+    -fx-font: normal bold 12 Landon;
+    -fx-base: #AE3522;
+    -fx-text-fill: orange;
+}
+
+.act-btn {
+    -fx-background-color:#ffffff;
+    -fx-padding: 10px;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+}
+
+.act-btn:hover {
+    -fx-cursor: hand;
+}
+.viw-icon{
+    -fx-fill:#007BFF 
+}
+.rvw-icon{
+    -fx-fill:#28A745 
+}
+.apr-icon{
+    -fx-fill:#17A2B8 
+}
+.pas-icon{
+    -fx-fill:#6C757D 
+}
+.edt-icon {
+    -fx-fill:#FFC107 ;
+}
+.act-icon {
+    -fx-fill:#6848e7;
+}
+.blk-icon {
+    -fx-fill:#db6e4b;
+}
+.del-icon {
+    -fx-fill:#b11a1a;
+}
+

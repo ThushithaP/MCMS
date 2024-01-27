@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loanIndex" prefHeight="600.0" prefWidth="1300.0" style="-fx-background-color: #EEF5FF;" stylesheets="@../../CSS/index.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finance.mcms.Controller.Loan.IndexController">
+
+    <Pane layoutX="46.0" layoutY="1.0" prefHeight="93.0" prefWidth="1232.0">
+        <Label layoutY="52.0" prefHeight="26.0" prefWidth="178.0" text="Loan">
+            <font>
+                <Font name="Calibri Bold" size="30.0" />
+            </font>
+        </Label>
+        <Hyperlink layoutX="1100.0" layoutY="14.0" text="Dashboard /" />
+        <Hyperlink disable="true" layoutX="1172.0" layoutY="14.0" text="Loan" />
+    </Pane>
+
+    <HBox layoutX="46.0" layoutY="128.0" prefHeight="33.0" prefWidth="1232.0">
+        <Button fx:id="newLoan" mnemonicParsing="false" onAction="#newLoan" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: #3269c2;" text="New Loan" textFill="WHITE">
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+            </graphic>
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <TextField fx:id="loanSearch" onKeyTyped="#loadLoan" prefHeight="34.0" prefWidth="802.0" promptText="Search">
+            <HBox.margin>
+                <Insets left="50.0" />
+            </HBox.margin>
+        </TextField>
+        <HBox fx:id="bulkBtnBar">
+            <Hyperlink>
+                <graphic>
+                    <FontAwesomeIconView fill="#3a894f" glyphName="FILE_EXCEL_ALT" size="25" text="" wrappingWidth="21.428571701049805" />
+                </graphic>
+                <tooltip>
+                    <Tooltip styleClass="act-bulk-tooltip" text="Export to Excel" />
+                </tooltip>
+                <HBox.margin>
+                    <Insets left="178.0" />
+                </HBox.margin>
+            </Hyperlink>
+            
+            <Hyperlink>
+                <graphic>
+                    <FontAwesomeIconView fill="#b11a1a" glyphName="TRASH" size="25" text="" onMouseClicked="#bulkDelete"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip styleClass="act-bulk-tooltip" text="Delete Customer" />
+                </tooltip>
+                <HBox.margin>
+                    <Insets left="10.0" />
+                </HBox.margin>
+            </Hyperlink>
+        </HBox>
+    </HBox>
+
+    <TableView fx:id="loanTable" layoutX="48.0" layoutY="211.0" prefHeight="504.0" prefWidth="1228.0">
+      <columns>
+          <TableColumn fx:id="colCheck" prefWidth="32.799983978271484">
+              <graphic>
+                  <CheckBox fx:id="selectAll" mnemonicParsing="false" onAction="#selectAll" />
+              </graphic>
+          </TableColumn>
+          <TableColumn fx:id="colName" prefWidth="181.6000213623047" text="Name" />
+          <TableColumn fx:id="colNic" minWidth="2.39996337890625" prefWidth="144.79998779296875" text="NIC" />
+          <TableColumn fx:id="colSector" prefWidth="107.20001220703125" text="Working Sector" />
+          <TableColumn fx:id="colProfession" prefWidth="109.60000610351562" text="Profession" />
+          <TableColumn fx:id="colAmount" prefWidth="123.20001220703125" text="Loan amount" />
+          <TableColumn fx:id="colInterest" prefWidth="75.0" text="Interest" />
+          <TableColumn fx:id="colDuration" prefWidth="88.800048828125" text="Duration" />
+          <TableColumn fx:id="colInstallment" prefWidth="100.800048828125" text="Installment" />
+          <TableColumn fx:id="colStatus" prefWidth="91.9998779296875" text="Loan Status" />
+          <TableColumn fx:id="colAction" prefWidth="164.0" text="Action" />
+      </columns>
+    </TableView>
+</AnchorPane>
