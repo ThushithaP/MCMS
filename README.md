@@ -28,3 +28,4 @@ The Micro Credit Management System is currently in its initial development stage
    - **User-Friendly:** Ensures ease of use and accessibility for individuals new to microfinance operations.
 
 This Micro Credit Management System is designed as an entry-level solution, providing beginners with a foundational platform to start understanding and managing microfinance operations effectively.
+![Dashboard](src/main/resources/com/finance/mcms/Image/dashboard.png)
